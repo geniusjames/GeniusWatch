@@ -12,6 +12,8 @@
 		5555E2322A249CF20025E85A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2312A249CF20025E85A /* ContentView.swift */; };
 		5555E2342A249CF40025E85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5555E2332A249CF40025E85A /* Assets.xcassets */; };
 		5555E2372A249CF40025E85A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5555E2362A249CF40025E85A /* Preview Assets.xcassets */; };
+		5555E2452A24C1D60025E85A /* GeniusText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2442A24C1D60025E85A /* GeniusText.swift */; };
+		5555E2472A24C20A0025E85A /* GeniusGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2462A24C20A0025E85A /* GeniusGauge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,10 @@
 		5555E2312A249CF20025E85A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5555E2332A249CF40025E85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5555E2362A249CF40025E85A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5555E2412A24A2640025E85A /* GeniusWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GeniusWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5555E2422A24A9E10025E85A /* GeniusWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GeniusWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		5555E2442A24C1D60025E85A /* GeniusText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeniusText.swift; sourceTree = "<group>"; };
+		5555E2462A24C20A0025E85A /* GeniusGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeniusGauge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,13 @@
 		5555E22E2A249CF20025E85A /* GeniusWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				5555E2432A24C1B60025E85A /* views */,
+				5555E2422A24A9E10025E85A /* GeniusWatch Watch App.entitlements */,
+				5555E2412A24A2640025E85A /* GeniusWatch-Watch-App-Info.plist */,
 				5555E22F2A249CF20025E85A /* GeniusWatchApp.swift */,
 				5555E2312A249CF20025E85A /* ContentView.swift */,
+				5555E2442A24C1D60025E85A /* GeniusText.swift */,
+				5555E2462A24C20A0025E85A /* GeniusGauge.swift */,
 				5555E2332A249CF40025E85A /* Assets.xcassets */,
 				5555E2352A249CF40025E85A /* Preview Content */,
 			);
@@ -92,6 +103,13 @@
 				5555E2362A249CF40025E85A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5555E2432A24C1B60025E85A /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +210,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5555E2472A24C20A0025E85A /* GeniusGauge.swift in Sources */,
 				5555E2322A249CF20025E85A /* ContentView.swift in Sources */,
+				5555E2452A24C1D60025E85A /* GeniusText.swift in Sources */,
 				5555E2302A249CF20025E85A /* GeniusWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,12 +342,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GeniusWatch Watch App/GeniusWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GeniusWatch Watch App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GeniusWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GeniusWatch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow GeniusWatch Share your health data";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -351,12 +375,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GeniusWatch Watch App/GeniusWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GeniusWatch Watch App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GeniusWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = GeniusWatch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow GeniusWatch Share your health data";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
